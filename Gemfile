@@ -38,7 +38,7 @@ gem "terser", ">= 1.1.4", require: false
 gem "json", ">= 2.0.0"
 
 # Workaround until Ruby ships with cgi version 0.3.6 or higher.
-gem "cgi", ">= 0.3.6", require: false
+gem "cgi", ">= 0.3.7", require: false
 
 group :rubocop do
   gem "rubocop", ">= 1.25.1", require: false
@@ -78,13 +78,13 @@ gem "web-console", require: false
 
 # Action Pack and railties
 rack_version = ENV.fetch("RACK", "~> 3.0")
-gem "rack", rack_version
+gem "rack", ">= 3.0.13", rack_version
 
 # Active Job
 group :job do
   gem "resque", require: false
   gem "resque-scheduler", require: false
-  gem "sidekiq", require: false
+  gem "sidekiq", ">= 8.0.0", require: false
   gem "sucker_punch", require: false
   gem "delayed_job", require: false
   gem "queue_classic", ">= 4.0.0", require: false, platforms: :ruby
