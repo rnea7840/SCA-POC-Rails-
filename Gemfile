@@ -78,7 +78,7 @@ gem "web-console", require: false
 
 # Action Pack and railties
 rack_version = ENV.fetch("RACK", "~> 3.0")
-gem "rack", rack_version
+gem "rack", ">= 3.0.14", rack_version
 
 # Active Job
 group :job do
