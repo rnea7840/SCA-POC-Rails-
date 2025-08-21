@@ -90,7 +90,7 @@ group :job do
   gem "queue_classic", ">= 4.0.0", require: false, platforms: :ruby
   gem "sneakers", require: false
   gem "backburner", require: false
-  gem "delayed_job_active_record", require: false
+  gem "delayed_job_active_record", ">= 4.1.8", require: false
 end
 
 # Action Cable
