@@ -12,19 +12,19 @@ end
 # We need a newish Rake since Active Job sets its test tasks' descriptions.
 gem "rake", ">= 13"
 
-gem "sprockets-rails", ">= 2.0.0"
-gem "propshaft", ">= 0.1.7"
-gem "capybara", ">= 3.38"
+gem "sprockets-rails", ">= 3.5.0"
+gem "propshaft", ">= 0.7.0"
+gem "capybara", ">= 3.39.0"
 gem "selenium-webdriver", ">= 4.0.0"
 
-gem "rack-cache", "~> 1.2"
-gem "stimulus-rails"
-gem "turbo-rails"
-gem "jsbundling-rails"
-gem "cssbundling-rails"
-gem "importmap-rails"
-gem "tailwindcss-rails"
-gem "dartsass-rails"
+gem "rack-cache", "~> 1.14", ">= 1.14.0"
+gem "stimulus-rails", ">= 1.2.2"
+gem "turbo-rails", ">= 1.3.3"
+gem "jsbundling-rails", ">= 1.1.2"
+gem "cssbundling-rails", ">= 1.2.0"
+gem "importmap-rails", ">= 1.1.6"
+gem "tailwindcss-rails", ">= 2.0.21"
+gem "dartsass-rails", ">= 0.5.0"
 # require: false so bcrypt is loaded only when has_secure_password is used.
 # This is to avoid Active Model (and by extension the entire framework)
 # being dependent on a binary library.
@@ -45,7 +45,7 @@ group :rubocop do
   gem "rubocop-minitest", require: false
   gem "rubocop-packaging", require: false
   gem "rubocop-performance", require: false
-  gem "rubocop-rails", require: false
+  gem "rubocop-rails", ">= 2.19.0", require: false
   gem "rubocop-md", require: false
 end
 
@@ -74,17 +74,17 @@ gem "msgpack", ">= 1.7.0", require: false
 gem "bootsnap", ">= 1.4.4", require: false
 gem "webrick", require: false
 gem "jbuilder", require: false
-gem "web-console", require: false
+gem "web-console", ">= 4.2.1", require: false
 
 # Action Pack and railties
 rack_version = ENV.fetch("RACK", "~> 3.0")
-gem "rack", rack_version
+gem "rack", ">= 3.1.18", rack_version
 
 # Active Job
 group :job do
-  gem "resque", require: false
-  gem "resque-scheduler", require: false
-  gem "sidekiq", require: false
+  gem "resque", ">= 2.5.0", require: false
+  gem "resque-scheduler", ">= 4.8.0", require: false
+  gem "sidekiq", ">= 7.0.4", require: false
   gem "sucker_punch", require: false
   gem "delayed_job", require: false
   gem "queue_classic", ">= 4.0.0", require: false, platforms: :ruby
